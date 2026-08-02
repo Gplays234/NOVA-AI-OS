@@ -1,21 +1,33 @@
-// NOVA AI OS Core
+const terminal = document.getElementById("terminal");
 
-console.log("NOVA AI OS initialized");
-
-let messages = [
-    "Scanning systems...",
+let lines = [
+    "Booting NOVA AI OS...",
+    "Loading AI Core...",
+    "Scanning sensors...",
     "Checking network...",
-    "AI Core online...",
-    "All systems ready."
+    "Security protocols active...",
+    "All systems online."
 ];
 
-let i = 0;
+let index = 0;
 
-setInterval(() => {
-    console.log(messages[i]);
-    i++;
-
-    if (i >= messages.length) {
-        i = 0;
+function bootSequence() {
+    if (index < lines.length) {
+        terminal.innerHTML = lines[index];
+        index++;
+        setTimeout(bootSequence, 1500);
+    } else {
+        terminal.innerHTML = "NOVA AI READY >_";
     }
-}, 2000);
+}
+
+bootSequence();
+
+
+function updateTime(){
+    document.getElementById("time").innerHTML =
+    "TIME: " + new Date().toLocaleTimeString();
+}
+
+setInterval(updateTime,1000);
+updateTime();
