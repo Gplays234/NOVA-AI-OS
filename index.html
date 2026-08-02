@@ -4,20 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NOVA AI OS</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body style="margin:0;background:#050816;color:#00ffff;font-family:Arial,sans-serif;display:flex;justify-content:center;align-items:center;height:100vh;">
 
-<div style="text-align:center;">
+<body>
+
+<div class="container">
     <h1>NOVA AI OS</h1>
-    <p>Initializing AI Systems...</p>
+    <p>🤖 AI Core: ONLINE</p>
+    <p>📡 Network: CONNECTED</p>
+    <p>⚡ System Status: READY</p>
     <p id="time"></p>
 </div>
 
 <script>
 function updateTime(){
     document.getElementById("time").innerHTML =
-        new Date().toLocaleTimeString();
+    "TIME: " + new Date().toLocaleTimeString();
 }
+
 setInterval(updateTime,1000);
 updateTime();
 </script>
