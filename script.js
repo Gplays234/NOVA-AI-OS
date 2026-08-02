@@ -31,3 +31,7 @@ function updateTime(){
 
 setInterval(updateTime,1000);
 updateTime();
+function runCommand(command){
+    document.getElementById("terminal").innerHTML =
+    "NOVA > " + command;
+}
