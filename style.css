@@ -1,0 +1,38 @@
+body {
+    margin: 0;
+    background: #050816;
+    color: #00ffff;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+    border: 2px solid #00ffff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 25px #00ffff;
+}
+
+h1 {
+    font-size: 45px;
+    letter-spacing: 5px;
+    animation: glow 2s infinite alternate;
+}
+
+p {
+    font-size: 20px;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px #00ffff;
+    }
+    to {
+        text-shadow: 0 0 30px #00ffff;
+    }
+}
