@@ -1,31 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NOVA AI OS</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NOVA AI OS</title>
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <div class="container">
-    <h1>NOVA AI OS</h1>
-    <p>🤖 AI Core: ONLINE</p>
-    <p>📡 Network: CONNECTED</p>
-    <p>⚡ System Status: READY</p>
-    <p id="time"></p>
+
+<h1>NOVA AI OS</h1>
+
+<div class="panel">
+<h2>🤖 AI CORE</h2>
+<p>Status: ONLINE</p>
+<p>Mode: Autonomous</p>
 </div>
 
-<script>
-function updateTime(){
-    document.getElementById("time").innerHTML =
-    "TIME: " + new Date().toLocaleTimeString();
-}
+<div class="panel">
+<h2>📡 SYSTEM</h2>
+<p>Network: CONNECTED</p>
+<p>Security: ACTIVE</p>
+</div>
 
-setInterval(updateTime,1000);
-updateTime();
-</script>
+<div class="panel">
+<h2>🛰 RADAR</h2>
+<div class="radar"></div>
+</div>
+
+<div class="panel terminal">
+<h2>💻 TERMINAL</h2>
+<p id="terminal">Initializing...</p>
+</div>
+
+<p id="time"></p>
+
+</div>
+
 <script src="script.js"></script>
+
 </body>
 </html>
